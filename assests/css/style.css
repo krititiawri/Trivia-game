@@ -27,7 +27,7 @@ img{
 }
 #ques{
 	color: white;
-	font-size: 20px;
+	font-size: 30px;
 }
 
 ol,li{
@@ -37,28 +37,54 @@ ol,li{
 #ans{
 	text-align: center;
 }
+/*for button*/
+.btn-primary{
+  margin-top: 40px;
+}
+/*Setting the background*/
+.jumbotron{
+	background-image: url("../images/Map.png");
+	background-position: center;
+	background-size: 780px ;
+}
+/*color for timer*/
+h2{
+	color: white;
+}
+/*color for final screen containing number of wrong and right answers*/
+h3{
+	color: white;
+}
+#reset{
+	margin-left: 100px;
+}
+.container-fluid{
+	background-image: url("../images/trivia12.jpg");
+	background-size: 350px 150px;
+}
 .mainArea{
 	border-style: solid;
 	border-color: black;
-	border-width: 10px;
 	background-image: url("../images/country.gif");
 	margin-top: 10px;
-	width:45%;
+	width:55%;
 	margin-left: 250px;
 	text-align: center;
 	height: 270px;
 	background-image: no-repeat;
 	background-position: center;
 }
-.container{
-	background-image: url("../images/12.gif");
+.container1{
+	background-image: url("../images/Quiz.jpg");
 	background-color: yellow;
 	border-style: solid;
 	border-color: black;
 	border-width: 10px;
 	margin-top: 10px;
-	width:45%;
+	width:55%;
 	margin-left: 250px;
 	background-image: no-repeat;
 	background-position: center;
+	padding: 50px;
+	/*background-size: 100%;*/
 }

@@ -4,6 +4,8 @@
 	<title></title>
 	<!-- jquery library -->
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	 	<!-- We need to bring in the bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<!-- Css file -->
 	 <link rel="stylesheet" type="text/css" href="assests/css/style.css">
 	 <!-- Javascript file -->
@@ -11,14 +13,25 @@
 </head>
 <body>
 <!-- Header toinclude the heading -->
-<header>
+<!-- <header>
 		<h1>Trivia Game</h1> 
-</header>
+</header> -->
+<!-- Navigation bar -->
+<nav class="navbar navbar-default" >
+  <div class="container-fluid back-color">
+    <div class="navbar-header">
+        <img src="assests/images/trivia12.jpg">
+    </div>
+  </div>
+</nav>
+<div class="container">
+
+<div class="jumbotron">	
 <!-- to include start button -->
 <div class="mainArea">
 </div>
 <!-- To include game message -->
-<div class="container">
+<div class="container1">
 <!-- to include timer -->
 <div id="nw"></div>
 <!-- To include Questions -->
@@ -32,6 +45,7 @@
 <!-- <!-- To incude pictures -->
 <div id="picture"></div>
 </div>
-
+</div>
+</div>
 </body>
 </html>

@@ -26,7 +26,7 @@ var Quiz = {
 };
 // Declaring Global variables
 var click =0;
-// var flag =true;
+var flag =true;
 var intervalId;
 var ansClicked;
 var count = 30;
@@ -48,7 +48,7 @@ $("body").on("click", ".start-button", function(event){
     clickSound.play();
 	event.preventDefault();  // added line to test issue on GitHub Viewer
   // Showing the container containg quiz questions
-    $(".container").show();
+    $(".container1").show();
   // Hiding the initial screen
     $(".mainArea").hide();
   // Starting the timer
@@ -62,42 +62,53 @@ $("body").on("click", ".start-button", function(event){
 // Things to be done when the 1of 4 options are pressed
 
 $('body').on("click", 'li',function(event){
+  // flag =true;
      audio.pause();
      clickSound.play();
 		var value = $(this).text();
+ 
+
 		var answer = Quiz.data[index].ans;
+    if(flag){
     // if user click equals to the answer the increment the current count and stop the function
        	if(value===answer){
+             flag = false;
        		correctAns++;
           timerSetWon();
+
        	}
        	else if(value!=answer){
+            flag = false;
        		wrongAns++;
           timerSetLoose();
           
        	}
        	else{
+            flag = false;
        		console.log("Not Answered");
        		notAns++;
        	}
-      
-	});
+        
+       } 
 
+	});
+    
 });
 
 
 // Functions to be performed to the starting screen
 function initialScreen(){
-  startScreen = "<p class='text-center main-button-container'><a class='btn btn-primary btn-lg btn-block start-button' href='#' role='button'>Start Quiz</a></p>";
+  startScreen = "<p class='text-center main-button-container'><a class='btn btn-primary btn-lg  start-button' href='#' role='button'>Start Quiz</a></p>";
   $(".mainArea").html(startScreen);
   var text = $("<p>");
   text.html("<h1>Trivia Game Quiz</h1>");
-  $(".mainArea").append(text);
+  $(".mainArea").prepend(text);
   // $(".mainArea").html(startText);
-  $(".container").hide();
+  $(".container1").hide();
 }
 // To set the timer if player has won
 function timerSetWon(){
+          
           $("#picture").html("<h1>Correct Answer</h1>");   
           var pic = $("<img>");
           pic.attr("src",Quiz.data[index].images);
@@ -106,7 +117,8 @@ function timerSetWon(){
            var timeoutID = window.setTimeout(function(){
               $("#picture").html("");
               stop();
-           }, [5000]);    
+              flag =true;
+           }, [5000]);   
 }
 
 // To set the timer if player has Lost
@@ -118,6 +130,7 @@ function timerSetLoose(){
            var timeoutID = window.setTimeout(function(){
               $("#picture").html("");
               stop();
+               flag =true;
            }, [5000]);    
 }
 // To create question and answers
@@ -164,14 +177,14 @@ function run() {
         $("#option").empty();
         $("#ques").empty();
         $("#nw").empty();
-        answer = Quiz.data[index].ans;
+        answer = Quiz.data[index].ans; 
         var randomQuestion = Quiz.data[index];
-        createQuestion(randomQuestion);        
+        createQuestion(randomQuestion); 
+
       }else{
         $("#option").empty();
         $("#ques").empty();
         $("#nw").empty();
-
         $("#ans").html("<h3>Number of correct Answers" +""+ ":"+""+correctAns+"</h3>");
         var wrong  = $("<div>");
         console.log(answer);
@@ -183,16 +196,19 @@ function run() {
     // Creating Reset button
         var btn = $("<button>");
         btn.attr('data-name',"reset");
-        btn.text("RESET");
+        btn.text("Start Over","text-center");
+        // btn.attr("class","btn btn-success");
+        btn.attr("class","btn-primary btn-lg"); 
         $("#reset").append(btn);
         // listen for reset button click
-      $("#reset").on("click", function() {
+        $("#reset").on("click", function() {
         index = 0;
         randomQuestion = Quiz.data[index];
         answer = Quiz.data[index].ans;
         run();
         createQuestion(randomQuestion);
         decrement();
+   // To empty the contaier for answer and hiding the Reset button
         $("#ans").empty();
         $("#reset").hide();
 
