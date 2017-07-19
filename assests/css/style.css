@@ -1,0 +1,47 @@
+body,html{
+	background-image: url("../images/trivia-spin.gif");
+	background-position: center;
+	height: 100%;
+	background-image: no-repeat;
+}
+header{
+	background-image: url("../images/red.jpg");
+	border-style: solid;
+	border-color: black;
+	border-width: 10px;
+	margin-top: 50px;
+}
+h1{
+	color: red;
+	font-size: 50px;
+    text-align: center;
+}
+.btn-primary {
+	color: white;
+	font-size: 50px;
+}
+img{
+	width: 150px;
+	height: 150px;
+}
+.mainArea{
+	border-style: solid;
+	border-color: black;
+	border-width: 10px;
+	background-image: url("../images/red.jpg");
+	margin-top: 50px;
+	width:45%;
+	margin-left: 250px;
+	text-align: center;
+	height: 270px;
+}
+.container{
+	background-image: url("../images/2014.jpg");
+	border-style: solid;
+	border-color: black;
+	border-width: 10px;
+	margin-top: 150px;
+	width:75%;
+	margin-left: 150px;
+	/*height: 370px;*/	
+}
