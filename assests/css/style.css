@@ -5,14 +5,15 @@ body,html{
 	background-image: no-repeat;
 }
 header{
-	background-image: url("../images/red.jpg");
+	background-image: url("../images/trivia12.jpg");
 	border-style: solid;
 	border-color: black;
 	border-width: 10px;
 	margin-top: 50px;
+	background-position: center;
 }
 h1{
-	color: red;
+	color: Blue;
 	font-size: 50px;
     text-align: center;
 }
@@ -24,24 +25,40 @@ img{
 	width: 150px;
 	height: 150px;
 }
+#ques{
+	color: white;
+	font-size: 20px;
+}
+
+ol,li{
+	color: white;
+	font-size: 20px;
+}
+#ans{
+	text-align: center;
+}
 .mainArea{
 	border-style: solid;
 	border-color: black;
 	border-width: 10px;
-	background-image: url("../images/red.jpg");
-	margin-top: 50px;
+	background-image: url("../images/country.gif");
+	margin-top: 10px;
 	width:45%;
 	margin-left: 250px;
 	text-align: center;
 	height: 270px;
+	background-image: no-repeat;
+	background-position: center;
 }
 .container{
-	background-image: url("../images/2014.jpg");
+	background-image: url("../images/12.gif");
+	background-color: yellow;
 	border-style: solid;
 	border-color: black;
 	border-width: 10px;
-	margin-top: 150px;
-	width:75%;
-	margin-left: 150px;
-	/*height: 370px;*/	
+	margin-top: 10px;
+	width:45%;
+	margin-left: 250px;
+	background-image: no-repeat;
+	background-position: center;
 }
